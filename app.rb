@@ -22,4 +22,9 @@ post '/sign-up-process' do
 	@user.email=params[:email]
 	@user.bday=params[:bday]
 	@user.save
+	redirect '/home'
+end
+
+get '/home' do
+	erb :home
 end
